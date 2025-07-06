@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  padding: 32px 0;
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+}
+
+#local-video,
+[id^="remote-video-"] {
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  border: 2px solid #444;
+}
+
+div[style*="display: flex"] {
+  background: rgba(30, 30, 40, 0.85);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 0 auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}

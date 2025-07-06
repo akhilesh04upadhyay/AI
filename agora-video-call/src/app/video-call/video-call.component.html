@@ -1,0 +1,23 @@
+<div>
+  <h2>Agora Video Call</h2>
+  <div>
+    <button (click)="join()" [disabled]="uid">Join</button>
+    <button (click)="leave()" [disabled]="!uid">Leave</button>
+  </div>
+  <div style="display: flex; gap: 16px; margin-top: 16px">
+    <div>
+      <h3>Local Video</h3>
+      <div
+        id="local-video"
+        style="width: 320px; height: 240px; background: #000"
+      ></div>
+    </div>
+    <div *ngFor="let remoteUid of remoteUsers | keyvalue">
+      <h3>Remote Video: {{ remoteUid.key }}</h3>
+      <div
+        [id]="'remote-video-' + remoteUid.key"
+        style="width: 320px; height: 240px; background: #222"
+      ></div>
+    </div>
+  </div>
+</div>
